@@ -12,13 +12,13 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/blog">
+        <Route path="/blog" exact>
           <BlogList />
         </Route>
-        <Route path="/contact">
+        <Route path="/contact" exact>
           <Contact />
         </Route>
-        <Route path="/blog/:id" render={(props) => <BlogDetails {...props} />} />
+        <Route path="/blog/:id" render={(props) => <BlogDetails {...props} />} exact />
       </Switch>
     </div>
   );
